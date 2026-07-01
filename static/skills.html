@@ -235,9 +235,9 @@
     button.addEventListener('click', () => {
         console.log("here");
       const title = button.getAttribute('data-title');
-      const description = button.getAttribute('data-description');
+      const description = $('.skill-extra', button.closest('.skill-card')).html();
       document.getElementById('skill-modal-label').textContent = title;
-      document.getElementById('skill-modal-description').textContent = description;
+      document.getElementById('skill-modal-description').innerHTML = description;
     });
   });
 </script>
